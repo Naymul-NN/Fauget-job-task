@@ -5,14 +5,14 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <div className="carousel-item relative w-[1070px] mx-auto h-[350px]  ">
+            <div className="carousel-item relative w-full mx-auto h-[350px]  ">
                 
                 <Image
-                       width={1070}
-                       height={400}
-                       
-                       src="https://i.ibb.co/cK9WT4g/man-1281642-1280.jpg" alt="Shoes" />
-                <div className='absolute  rounded-lg pl-20 h-full bg-gradient-to-r from-[#03eed362] to-[#0071822f] w-full '>
+                    //    width={fill}
+                    //    height={400}
+                       fill={true}
+                       src="https://i.ibb.co/2K0F6sX/images.jpg" alt="Shoes" />
+                <div className='absolute   pl-20 h-full  w-full '>
                     <div className=' space-y-5 pt-8 '>
                         <h1>Top play music station</h1>
                         <h1 className='text-2xl font-bold '> The Dark Side of Music: Unveiling Its Negative Effects</h1>

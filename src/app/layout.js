@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/navbar/Navbar";
+import AuthProvider from "@/components/auth/AuthProvider";
+import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,48 +15,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
        <body className={`bg-[#0d0c22] ${inter.className} text-white`}>
-        <div >
+        {/* <div >
           <Navbar></Navbar>
-        </div>
-      <div className="flex">
+        </div> */}
+      {/* <div className="flex">
       <div className="mt-[-110px] ">
         <Sidebar></Sidebar>
       </div>
-       <div > 
-        {children}
-       </div>
-      </div>
+       <div >  */}
+       <AuthProvider>{children}</AuthProvider>
+       {/* </div>
+      </div> */}
+       <Toaster />
        </body>
     </html>
   );
 }
 
-// import Link from "next/link";
-
-
-// const DashboardLayout = ({ children }) => {
-//   return (
-//     <div className="w-[80%] mx-auto flex gap-5 pt-20">
-//     <div className="w-[30%] bg-pink-400 min-h-screen">
-//     <header>
-//         <h1>Dashboard Header</h1>
-//       </header>
-//       <nav>
-//         <ul>
-//           <li><Link href="/dashboard">Activity</Link></li>
-//           <li><Link href="/dashboard/profile">Profile</Link></li>    
-//           <hr/>
-//           <li><Link href="/">Home</Link></li>
-//         </ul>
-//       </nav>
-//     </div>
-//      <div className="w-70%">
-//      <main>
-//         {children}
-//       </main>
-//      </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardLayout;
