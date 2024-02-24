@@ -24,7 +24,7 @@ const Tabs = () => {
 
     fetchData();
   }, []); 
-
+ 
   // function for preview 
   const handlePlayPause = (index, previewUrl) => {
     const newPlayStates = [...playStates];
