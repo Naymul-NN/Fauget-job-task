@@ -1,20 +1,22 @@
 import React from 'react';
 import Layout from '../mainlayout';
-
+import Podcast from '@/components/poscast/Podcast';
+import Privet from '@/components/privet/PrivetRoute';
 export const metadata = {
     title: "Fauget/podcast",
     description: "find you podcast",
   };
-const Podcast = () => {
+const Podcasts = () => {
     return (
-    <Layout>
-
-        <div className='pl-10'>
-            <h1 >see all podcast here</h1>
-        </div>
-    </Layout>
+        <Privet>
+           <Layout>
+           <div className='pl-10'>
+            <Podcast></Podcast>
+             </div>
+            </Layout>
+        </Privet>
 
     );
 };
 
-export default Podcast;
+export default Podcasts;

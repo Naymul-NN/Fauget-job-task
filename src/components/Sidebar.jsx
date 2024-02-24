@@ -15,6 +15,8 @@ import { useRouter } from "next/navigation";
 const Sidebar = () => {
   const {user, logOut} = useContext(AuthContext)
 const homeRouters = useRouter();
+
+  //logout function 
   
 const handleLogout = () => {
   try {

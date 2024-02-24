@@ -7,6 +7,7 @@ import Link from "next/link";
 import { GoogleAuthProvider } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { TbMusicQuestion } from "react-icons/tb";
 
 const Login = () => {
     
@@ -51,30 +52,33 @@ const Login = () => {
     return (
         <div>
              
-  <div className="pt-20">
+  <div className="pt-12">
 
-    <div className="bg-gray-400 w-1/3 mx-auto ">
+    <div className="bg-gray-600 w-[30%] mx-auto ">
+      <h1 className="flex justify-center items-center gap-2 text-2xl pt-5"> <TbMusicQuestion  />Fauget</h1>
+      <h1 className="text-center text-xl pt-3">Sign <br /> or</h1>
+      <Link href="/" className="flex items-center justify-center">Go Back to home</Link>
       <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-white">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" className="input input-bordered text-white bg-black" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered text-black" required />
+          <input type="password" placeholder="password" name="password" className="input input-bordered text-white bg-black" required />
           
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-black text-white hover:bg-gray-600">Login</button>
         </div>
         <p className="text-red-500 font-bold">{loginError}</p>
         <button onClick={handlegooleLogIn} className="btn">Go with google</button>
       </form>
-      <p className="text-black text-center">If you are new here! <Link href='/signup' className="text-green-800 font-bold" >Register</Link></p>
+      <p className="text-black text-center">If you are new here! <Link href='/signup' className="text-black font-bold" >Register</Link></p>
     </div>
   </div>
 

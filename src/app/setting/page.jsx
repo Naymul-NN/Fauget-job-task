@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../mainlayout';
 import Profile from '@/components/profile/Profile';
+import Privet from '@/components/privet/PrivetRoute';
 
 export const metadata = {
     title: "Fauget/setting",
@@ -8,11 +9,13 @@ export const metadata = {
   };
 const Setting = () => {
     return (
+      <Privet>
         <Layout>
         <div className='pl-10'>
            <Profile></Profile>
         </div>
      </Layout>
+      </Privet>
     );
 };
 

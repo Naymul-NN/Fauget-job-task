@@ -3,7 +3,7 @@ import React from 'react';
 
 const Sign = () => {
     return (
-        <div className='pl-96 items-center justify-center'>
+        <div className='min-h-screen'>
             <Signup></Signup>
         </div>
     );
