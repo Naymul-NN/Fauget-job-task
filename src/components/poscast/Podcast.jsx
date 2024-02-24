@@ -69,7 +69,7 @@ const Podcast = () => {
           </figure>
           <div className="card-body items-center text-center">
             <div className="card-actions">
-              <Link href={item.link}>See details</Link>
+              <Link href={`/podcast/${item.id}`}>See details</Link>
             </div>
           </div>
         </div>

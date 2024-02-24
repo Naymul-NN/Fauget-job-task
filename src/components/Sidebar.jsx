@@ -6,7 +6,7 @@ import { IoHome } from "react-icons/io5";
 import { IoSettings } from "react-icons/io5";
 import { MdQueueMusic } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./auth/AuthProvider";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -15,6 +15,12 @@ import { useRouter } from "next/navigation";
 const Sidebar = () => {
   const {user, logOut} = useContext(AuthContext)
 const homeRouters = useRouter();
+
+const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+const handleToggleSidebar = () => {
+  setIsSidebarOpen(!isSidebarOpen);
+};
+
 
   //logout function 
   
